@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Habits Survey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+      padding: 20px;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px; /* Limit form width for better readability */
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"],
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px; /* Add some space between form and button */
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h1>Gaming Habits Survey</h1>
+      <label for="dailyFrequency">How many hours do you spend gaming on an average day?</label>
+      <input type="number" id="dailyFrequency" name="dailyFrequency" min="0" required>
+      
+      <label for="weeklyFrequency">How many days a week do you play games?</label>
+      <input type="number" id="weeklyFrequency" name="weeklyFrequency" min="0" max="7" required>
+      
+      <label for="gamesPlayed">On average, how many different games do you play in a week?</label>
+      <input type="number" id="gamesPlayed" name="gamesPlayed" min="0" required>
+      
+      <label for="favoriteGenre">What is your favorite gaming genre?</label>
+      <select id="favoriteGenre" name="favoriteGenre" required>
+        <option value="">Please select</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Role-playing">Role-playing</option>
+        <option value="Strategy">Strategy</option>
+        <option value="Sports">Sports</option>
+        <option value="Simulation">Simulation</option>
+        <option value="Puzzle">Puzzle</option>
+        <option value="Other">Other</option>
+      </select>
+      
+      <!-- Hidden questions, shown after scrolling -->
+      <div class="hidden-questions">
+        <label for="spend">Do you spend money on games?</label>
+        <select id="spend" name="spend" required>
+          <option value="">Please select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+  
+        <label for="spendCost">How much do you spend?</label>
+        <select id="spendCost" name="spendCost" required>
+          <option value="">Please select</option>
+          <option value="50-100">P50-P100</option>
+          <option value="150-200">P150-P200</option>
+          <option value="350-450">P350-P450</option>
+          <option value="500 and above">500 and above</option>
+        </select>
+  
+        <label for="playingPreference">Do you prefer playing solo or with friends?</label>
+        <select id="playingPreference" name="playingPreference" required>
+          <option value="">Please select</option>
+          <option value="Solo">Solo</option>
+          <option value="Friends">With Friends</option>
+          <option value="Depends">Depends on the game type</option>
+        </select>
+  
+        <label for="platformPreference">Which gaming platform do you prefer the most?</label>
+        <select id="platformPreference" name="platformPreference" required>
+          <option value="">Please select</option>
+          <option value="PC">PC</option>
+          <option value="Console">Console</option>
+          <option value="Mobile">Mobile</option>
+        </select>
+        
+        <label for="favoriteGame">What is your all-time favorite video game?</label>
+        <input type="text" id="favoriteGame" name="favoriteGame" required>
+        
+        <label for="whyFavorite">What makes this game your favorite?</label>
+        <textarea id="whyFavorite" name="whyFavorite" rows="4" required></textarea>
+      </div>
+      <!-- End of hidden questions -->
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
