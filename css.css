@@ -7,7 +7,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #ff6b6b, #556270);;
   }
   
   .container {
